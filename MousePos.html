@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mouse Position Display</title>
+  
+</head>
+
+<body>
+	
+
+	<p>The mouse is located at position (<span id='#xPos'></span>,<span id='#yPos'></span>), and is <span id='#dist'></span> pixels from the lower-left corner.</p>
+
+
+
+<script>
+window.addEventListener('mousemove', function (event){
+	document.getElementById('#xPos').textContent = event.x;
+	document.getElementById('#yPos').textContent = event.y;
+})
+
+window.addEventListener('distance', function (event){
+	dist = Math.sqrt(x**2 + y**2);
+	document.getElementById('#dist').textContent = event.dist;
+})
+
+
+// $(document).mousemove(function(event){
+// 	updateXY();
+	
+// 	dist = Math.sqrt(x**2 + y**2);
+// 	$('#dist').text(dist);
+// });
+
+// function updateXY(){
+// 	var x = event.pageX;
+// 	var y = event.pageY;
+
+// 	$('#xPos').text(x);
+// 	$('#yPos').text(y);
+// }
+
+</script>
+
+</body>
+</html>
